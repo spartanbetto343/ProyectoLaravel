@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Plan de trabajo</title>
+	<link rel="shortcut icon" type="image/x-ico" href="../imagenes/favicon.ico">
+	<script type="text/javascript" src="../../javascript/plan de trabajo.js"></script>
+	<style>
+		body
+		{
+			font-family: Helvetica;
+			font-size: 20px;
+			background-color: #DEDA04;
+			margin: 20px 20px 20px 20px;
+			position: relative;
+		}
+		h1
+		{
+			position: relative;
+		}
+		label
+		{
+			position: relative;
+		}
+		.registrar
+		{
+			background-color: #FF0000;
+			border-radius: 15px;
+			color: white;
+			height: 40px;
+			width: 100px;
+			font-size: 20px;
+			position: relative;
+		}
+		input
+		{
+			height: 25px;
+			margin-left: 10px;
+		}
+		form
+		{
+			margin-left: 100px;
+		}
+
+	</style>
+</head>
+<body>
+	<p><img src="../imagenes/logodata.png" height="75px" width="150px"></p>
+	<center><h1>Registro de Plan de trabajo</h1></center>
+
+	<form action="plan.php" method="get" name="registroPlan" onsubmit="return validar2()">
+
+		<label for="numero">Numero</label><br>
+		<input id="numero" type="text" name="numero" size="70" required>
+		<br>
+		<br>
+		<label for="titulo">Titulo</label><br>
+		<input id="titulo" type="text" name="titulo" size="70" required>
+		<br>
+		<br>
+		<label for="proyecto">Numero del Proyecto</label><br>
+		<input id="proyecto" type="text" name="proyecto" size="70" required>
+		<br>
+		<br>
+		<label for="fecha">Fecha de inicio</label><br>
+		<input id="fecha" type="text" name="fecha" size="70" required>
+		<br>
+		<br>
+		<label for="fecha2">Fecha Limite</label><br>
+		<input id="fecha2" type="text" name="fecha2" size="70" required>
+		<br>
+		<br>
+		<label for="duracion">Duracion</label><br>
+		<input id="duracion" type="text" name="duracion" size="70" required>
+		<br>
+		<br>
+		<label for="empleado">Id de empleado</label><br>
+		<input id="empleado" type="text" name="empleado" size="70" required>
+		<br>
+		<br>
+		<br>
+		<center><input class="registrar" type="submit" name="registrar" value="Registrar"></center>
+	</form>
+
+</body>
+</html>

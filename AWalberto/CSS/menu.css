@@ -1,0 +1,55 @@
+body
+{
+	font-family: Helvetica;
+}
+p
+{
+	font-size: 25px;
+    padding: 15px 15px 15px 15px;
+}
+.Helicom
+{
+	color: white;
+	background: #282A29;
+	justify-content: space-between;
+	display: flex;
+
+}
+li
+{
+	list-style: none;
+	margin: 15px;
+	display: block;
+}
+.menu
+{
+	display: flex;
+	justify-content: space-between;
+}
+ul
+{
+	display: flex;
+	background: #282A29;
+	color: white;
+	font-size: 25px;
+}
+a
+{
+	color: white;
+	text-decoration: none;
+}
+.menu ul a:hover
+{
+	background: #00FFC5;
+	border: #00FFC5;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	color: black;
+}
+header
+{
+	margin-left: 50px;
+	margin-right: 50px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registro de Curriculum</title>
+	<link rel="shortcut icon" type="image/x-ico" href="../imagenes/favicon.ico">
+	<script type="text/javascript" src="../../javascript/curriculum.js"></script>
+	<style>
+		body
+		{
+			font-family: Helvetica;
+			font-size: 20px;
+			background-color: #DEDA04;
+			margin: 20px 20px 20px 20px;
+			position: relative;
+		}
+		h1
+		{
+			position: relative;
+		}
+		label
+		{
+			position: relative;
+		}
+		.registrar
+		{
+			background-color: #FF0000;
+			border-radius: 15px;
+			color: white;
+			height: 40px;
+			width: 100px;
+			font-size: 20px;
+			position: relative;
+		}
+		input
+		{
+			height: 25px;
+			margin-left: 10px;
+		}
+		form
+		{
+			margin-left: 100px;
+		}
+
+	</style>
+</head>
+<body>
+	<p><img src="../imagenes/logodata.png" height="75px" width="150px"></p>
+	<center><h1>Registro de Curriculum</h1></center>
+	
+	<form action="curriculum.php" method="get" name="resgistro" onsubmit="return validar17()">
+
+		<label for="solicitante">Nombre del solicitante</label><br>
+		<input id="solicitante" type="text" name="solicitante"  size="70"required>
+		<br>
+		<br>
+		<label for="direccion">Direccion</label><br>
+		<input id="direccion" type="text" name="direccion"  size="70"required>
+		<br>
+		<br>
+		<label for="email">E-mail</label><br>
+		<input id="email" type="text" name="email"  size="70"required>
+		<br>
+		<br>
+		<label for="telefono">Telefono</label><br>
+		<input id="telefono" type="text" name="telefono"  size="70"required>
+		<br>
+		<br>
+		<label for="fecha">Fecha</label><br>
+		<input id="fecha" type="text" name="fecha"  size="70"required>
+		<br>
+		<br>
+		<label for="titulo">Certificado/titulo</label><br>
+		<input id="titulo" type="text" name="titulo"  size="70"required>
+		<br>
+		<br>
+		<label for="institucion">Nombre de la institucion</label><br>
+		<input id="institucion" type="text" name="institucion"  size="70"required>
+		<br>
+		<br>
+		<label for="fecha2">Fecha de estudios</label><br>
+		<input id="fecha2" type="text" name="fecha2"  size="70"required>
+		<br>
+		<br>
+		<label for="duracion">Duracion</label><br>
+		<input id="duracion" type="text" name="duracion"  size="70"required>
+		<br>
+		<br>
+		<label for="idioma">Idiomas</label><br>
+		<input id="idioma" type="text" name="idioma"  size="70"required>
+		<br>
+		<br>
+		<label for="datos">Datos de interes</label><br>
+		<input id="datos" type="text" name="datos"  size="70"required>
+		<br>
+		<br>
+		<label for="nivel">Nivel de conocimiento</label><br>
+		<input id="nivel" type="text" name="nivel"  size="70"required>
+		<br>
+		<br>
+		<label for="aplicacion">Conocimiento de aplicaciones</label><br>
+		<input id="aplicacion" type="text" name="aplicacion"  size="70"required>
+		<br>
+		<br>
+		<label for="puestos">Puestos</label><br>
+		<input id="puestos" type="text" name="puestos"  size="70"required>
+		<br>
+		<br>
+		<label for="empresa">Nombre de la empresa</label><br>
+		<input id="empresa" type="text" name="empresa"  size="70"required>
+		<br>
+		<br>
+		<label for="duracion2">Duracion puestos</label><br>
+		<input id="duracion2" type="text" name="duracion2"  size="70"required>
+		<br>
+		<br>
+		<label for="especialidad">Especialidad</label><br>
+		<input id="especialidad" type="text" name="especialidad"  size="70"required>
+		<br>
+		<br>
+		<label for="archivo">Numero de archivo</label><br>
+		<input id="archivo" type="text" name="archivo"  size="70"required>
+		<br>
+		<br>
+		<label for="id_empleado">Id de empleado</label><br>
+		<input id="id_empleado" type="text" name="id_empleado"  size="70"required>
+		<br>
+		<br>
+		
+
+
+		<center><input class="registrar" type="submit" name="registrar" value="Registrar" placeholder="Registrar"></center>
+
+
+
+	</form>
+
+</body>
+</html>

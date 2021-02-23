@@ -1,0 +1,453 @@
+create table mobiliario(
+    codigo int(12) not null primary key,
+    tipo varchar(50) not null,
+    id_empleado int(12) not null,
+    fecha_compra varchar(12) not null,
+    marca varchar(50) not null,
+    color varchar(50),
+    tamano varchar(50),
+    almacenamiento varchar(50),
+    placa_madre varchar(50),
+    ram varchar(50),
+    procesador varchar(50),
+    monitor varchar(50),
+    teclado varchar(50),
+    mouse varchar(50))ENGINE=INNODB;
+
+insert into mobiliario
+    values (1,'equipo de computo',1,'20/05/2020','asus','negro','20cm*45cm*30cm','1 terabyte','gigabyte','16gb','i9 9900k','sambung 24in','asus','asus');
+insert into mobiliario
+    values (2,'equipo de computo',1,'20/05/2020','asus','negro','20cm*45cm*30cm','1 terabyte','gigabyte','16gb','i9 9900k','sambung 24in','asus','asus');
+insert into mobiliario
+    values (3,'equipo de computo',1,'20/05/2020','asus','negro','20cm*45cm*30cm','1 terabyte','gigabyte','16gb','i9 9900k','sambung 24in','asus','asus');
+insert into mobiliario
+    values (4,'equipo de computo',1,'20/05/2020','asus','negro','20cm*45cm*30cm','1 terabyte','gigabyte','16gb','i9 9900k','sambung 24in','asus','asus');
+insert into mobiliario
+    values (5,'equipo de computo',1,'20/05/2020','asus','negro','20cm*45cm*30cm','1 terabyte','gigabyte','16gb','i9 9900k','sambung 24in','asus','asus');
+
+
+
+
+create table empresa(
+    clave int(10) not null primary key,
+    nombre varchar(50) not null,
+    direccion varchar(100) not null,
+    clave_ent_fed int(6) not null,
+    telefono int(13) not null)ENGINE=INNODB;
+
+
+insert into empresa
+    values (1,'datavoice','naucalpan de juarez,mexico',15057,5512093611);
+
+
+
+create table empleado(
+    id_empleado int(12) not null primary key,
+    nombre varchar(50) not null,
+    apellido varchar(50) not null,
+    direccion varchar(100) not null,
+    email varchar(50) not null,
+    sueldo int(12) not null,
+    puesto varchar(50) not null,
+    sucursal varchar(50) not null,
+    curp varchar(20) not null,
+    rfc varchar(20) not null,
+    telefono int(13) not null,
+    cert_titulo varchar(150) not null,
+    ced_profesional int(12),
+    codigo_mobilario int(12) not null,
+    clave_empresa int(10) not null,
+    foreign key (codigo_mobilario)
+    references mobiliario(codigo),
+    foreign key (clave_empresa)
+    references empresa(clave))ENGINE=INNODB;
+
+
+
+insert into empleado
+    values (1,'Ernesto','De la O Viquez', 'naucalpan de juarez,mexico,10 de mayo','eviquez@datavoice.com.mx',40000,'director de desarrollo de software', 'naucalpan','deve780801hmcryla8','deve780801h0',5612596673,'titulo universitario',10397576,1,1);
+
+
+
+
+
+ create table plan_trabajo(
+    numero int(12) not null primary key,
+    titulo varchar(100) not null,
+    n_proyecto int(12) not null,
+    fecha_inicio varchar(12) not null,
+    fecha_limite varchar(12) not null,
+    duracion varchar(50) not null,
+    id_empleado_empleado int(12) not null,
+    foreign key (id_empleado_empleado)
+    references empleado(id_empleado))ENGINE=INNODB;
+
+
+insert into plan_trabajo
+    values(1,'proyecto alberto',1,'07/06/2020','07/06/2020','1 mes',1);
+
+
+
+
+ create table certificado_titulo(
+    id_certificado int(12) not null primary key,
+    tipo varchar(50) not null,
+    nombre varchar(50) not null,
+    institucion varchar(50) not null,
+    ano_empedicion int(4) not null,
+    n_archivo int(12),
+    id_empleado_empleado int(12) not null,
+    foreign key (id_empleado_empleado)
+    references empleado(id_empleado))ENGINE=INNODB;
+
+
+insert into certificado_titulo
+    values(767474,'certificacion scrum','scrum fundamentals','scrumstudy',2020,2,1);
+
+
+
+
+create table recibo_nomina(
+    folio int(12) not null primary key,
+    nombre_empresa varchar(50) not null,
+    direccion varchar(100) not null,
+    rfc varchar(20) not null,
+    periodo varchar(20) not null,
+    fecha_pago varchar(12) not null,
+    nombre_empleado varchar(50) not null,
+    curp varchar(20) not null,
+    tipo_pago varchar(30) not null,
+    salario_normal int(12) not null,
+    salario_hora int(12) not null,
+    horas_trabajadas int(12) not null,
+    isr int(12) not null,
+    imms int(12) not null,
+    total_deducciones int(12) not null,
+    neto_recibido int(12) not null,
+    folio_fiscal varchar(12),
+    cuenta_deposito varchar(12),
+    id_empleado_empleado int(12) not null,
+    foreign key (id_empleado_empleado)
+    references empleado(id_empleado))ENGINE=INNODB;
+
+
+insert into recibo_nomina
+    values(1,'data voice','naucalpan de juarez','deve7808011h0','2020-12','07/06/2020','ernesto','deve780801hmcryla8','deposito bancario',40000,454.54,88,1024.78,1000,2024.78,37975.22,'153698745','es1320900002903500083',1);
+
+
+ create table minuta(
+    n_minuta int(12) not null primary key,
+    n_proyecto int(12) not null,
+    alcances varchar(200) not null,
+    implicaciones varchar(200) not null,
+    desiciones varchar(200) not null,
+    id_empleado_empleado int(12) not null,
+    foreign key (id_empleado_empleado)
+    references empleado(id_empleado))ENGINE=INNODB;
+
+
+
+insert into minuta
+    values(1,1,'el proyecto tendra un gran alcance','puede haber errores decodigo','hacer un programa cfapas de llevar a cabo el proyecto',1);
+
+
+
+
+create table test_necesidades(
+    n_test int(12) not null primary key,
+    nombre_cliente varchar(50) not null,
+    fecha varchar(12) not null,
+    necesidades varchar(150) not null,
+    tipo_servicio varchar(150) not null,
+    requerimientos varchar(150) not null,
+    solucion varchar(150) not null,
+    id_empleado_empleado int(12) not null,
+    foreign key (id_empleado_empleado)
+    references empleado(id_empleado))ENGINE=INNODB;
+
+
+
+insert into test_necesidades
+    values(1,'alberto','07/06/2020','grabar llamadas de su empresa','master recorder','programa que grabe sus llamadas','desarrollar un programa de la rama master recorder',1);
+
+
+
+create table manual_usuario(
+    n_manual int(12) not null,
+    autor varchar(50) not null,
+    servicio varchar(50) not null,
+    cliente varchar(50) not null,
+    titulo varchar(50) not null,
+    n_archivo int(12),
+    id_empleado_empleado int(12) not null,
+    foreign key (id_empleado_empleado)
+    references empleado(id_empleado))ENGINE=INNODB;
+
+
+
+insert into manual_usuario
+    values(1,'ernesto','master recorder','alberto','manual de usuario',4,1);
+
+
+
+create table curriculum(
+    nomb_solicitante varchar(50) not null primary key,
+    direccion varchar(100) not null,
+    email varchar(50) not null,
+    telefono int(13) not null,
+    fecha varchar(12) not null,
+    cert_titulo varchar(50) not null,
+    nom_institucion varchar(50) not null,
+    fecha_estudios varchar(12) not null,
+    duracion_estudios varchar(20) not null,
+    idiomas varchar(50) not null,
+    datos_interes varchar(200) not null,
+    nivel_conocimiento varchar(50) not null,
+    con_aplicaciones varchar(50),
+    puestos varchar(300),
+    nomb_empresa varchar(200),
+    durac_puesto varchar(200),
+    especilidad varchar(50),
+    n_archivo int(12),
+    id_empleado_empleado int(12) not null,
+    foreign key (id_empleado_empleado)
+    references empleado(id_empleado))ENGINE=INNODB;
+
+
+insert into curriculum
+    values('ernesto de la o viquez','naulcalpan de juarez mmexico 10 de mayo','eviquez@datavoice.com.mx',5612596673,'07/06/2020','titulo universitario','unam','2004/2008','4 años','ingles','certificacion java','alto','java paython html css c++ c sql',' tester  desarrollador de software director de desarrollo de software','datavoice','8 años','desarrollo de software',5,1);
+
+
+create table analisis_recursos_necesarios(
+    n_analisis int(12) not null primary key,
+    n_proyecto int(12) not null,
+    personal_requerido int(2) not null,
+    perfil_requerido varchar(100) not null,
+    software_requerido varchar(100) not null,
+    hardware_necesario varchar(100) not null,
+    credenciales varchar(100) not null,
+    n_archivo int(12),
+    id_empleado_empleado int(12) not null,
+    foreign key (id_empleado_empleado)
+    references empleado(id_empleado))ENGINE=INNODB;
+
+
+
+
+insert into analisis_recursos_necesarios
+    values(1,1,5,'desarrollador-director de desarrollo-tester','sql lucidchart c atom java',' 5 equipos de computo','****',6,1);
+
+
+
+
+create table proyecto_documentado(
+    n_documentacion int(12) not null primary key,
+    n_proyecto int(12) not null,
+    nombre_cliente varchar(50) not null,
+    apellido varchar(100) not null,
+    fecha_elaboracion varchar(12) not null,
+    problematica varchar(200) not null,
+    n_archivo int(12),
+    id_empleado_empleado int(12) not null,
+    foreign key (id_empleado_empleado)
+    references empleado(id_empleado))ENGINE=INNODB;
+
+
+
+insert into proyecto_documentado
+    values(1,1,'alberto','serrano reyes','07/06/2020','grabar llamadas de su empresa',7,1);
+
+
+
+create table informe_reporte(
+    n_informe int(12) not null primary key,
+    titulo varchar(50) not null,
+    autor varchar(50) not null,
+    lugar varchar(100) not null,
+    fecha varchar(12) not null,
+    contenido varchar(200),
+    n_archivo int(12),
+    nombre varchar(50),
+    asunto varchar(50),
+    hora_entrada varchar(12),
+    salida varchar(12),
+    id_empleado_empleado int(12) not null,
+    foreign key (id_empleado_empleado)
+    references empleado(id_empleado))ENGINE=INNODB;
+
+
+
+insert into informe_reporte
+    values(1,'reporte de ventas','julio','naucalpan de j8uerez mexico','07/06/2020','el contenido del informe es',8,'***','****','****','****',1);
+
+
+
+create table contrato(
+    n_contrato int(12) not null primary key,
+    tipo varchar(50) not null,
+    nombre varchar(50) not null,
+    apellido varchar(50) not null,
+    nombre_empresa varchar(50) not null,
+    direccion_empresa varchar(100) not null,
+    fecha varchar(12) not null,
+    duracion_contrato varchar(100) not null,
+    n_archivo int(12) not null,
+    tipo_servicio varchar(50),
+    monto_pagar varchar(12),
+    sueldo_min varchar(12),
+    sueldo_max varchar(12),
+    puesto varchar(50),
+    duracion_prueba varchar(15),
+    vacaciones varchar(50),
+    id_empleado_empleado int(12) not null,
+    foreign key (id_empleado_empleado)
+    references empleado(id_empleado))ENGINE=INNODB;
+
+
+
+insert into contrato
+    values(1,'contrato cliente','alberto','serrano reyes','datavoice','naucalpan de juares mexico','07/06/2020','4 años',10,'master recorder',20000,'****','*****','******','******','****',1);
+
+
+
+
+create table servicio(
+    n_servicio int(12) not null primary key,
+    tipo varchar(50) not null,
+    precio int(12) not null,
+    metodo_pago varchar(50) not null,
+    clave_empresa int(10) not null,
+    foreign key (clave_empresa)
+    references empresa(clave))ENGINE=INNODB;
+
+
+
+insert into servicio
+    values(1,'master recorder',20000,'efectivo',1);
+
+
+
+
+create table cliente(
+    id_cliente int(12) not null primary key,
+    nombre varchar(50) not null,
+    apellido varchar(100) not null,
+    direccion varchar(200) not null,
+    telefono int(12) not null,
+    email varchar(50) not null,
+    estado varchar(50) not null,
+    codigo_postal int(6) not null,
+    numero_cuenta int(15),
+    entre_calles varchar(200),
+    manzana varchar(50),
+    inf_referencia varchar(200),
+    n_contrato_contrato int(12) not null,
+    foreign key (n_contrato_contrato)
+    references contrato(n_contrato),
+    n_servicio_servicio int(12) not null,
+    foreign key (n_servicio_servicio)
+    references servicio(n_servicio))ENGINE=INNODB;
+
+
+
+insert into cliente
+values(1,'alberto','serrrano reyes','loma alta villa del carbon',5523698741,'betto5523@gmial.com','mexico',54333,15204569,'madroño','****','a un costado del panteon',1,1);
+
+
+
+create table factura(
+    n_factura int(12) not null primary key,
+    fecha_emision varchar(12) not null,
+    fecha_vencimiento varchar(12) not null,
+    rfc varchar(20) not null,
+    concepto varchar(50) not null,
+    importe int(12) not null,
+    nombre_cliente varchar(50) not null,
+    direccion varchar(100) not null,
+    nombre_empresa varchar(50) not null,
+    clave_empresa int(12) not null,
+    n_archivo int(12),
+    id_empleado_empleado int(12) not null,
+    foreign key (id_empleado_empleado)
+    references empleado(id_empleado),
+    id_cliente_cliente int(12) not null,
+    foreign key (id_cliente_cliente)
+    references cliente(id_cliente))ENGINE=INNODB;
+
+
+
+insert into factura
+values(1,'07/06/2020','07/07/2020','sera010806hmcryla2','pago de servicio',20000,'alberto','loma alta villa del carbon mexico','datavoice',1,9,1,1);
+
+
+
+
+create table orden_servicio(
+    n_orden int(12) not null,
+    fecha varchar(12) not null,
+    nombre_cliente varchar(50) not null,
+    direccion varchar(100) not null,
+    telefono int(13) not null,
+    tipo_servicio varchar(50) not null,
+    descripcion_ser varchar(150) not null,
+    precio_aprox int(12) not null,
+    forma_pago varchar(30) not null,
+    n_archivo int(12),
+    id_empleado_empleado int(12) not null,
+    foreign key (id_empleado_empleado)
+    references empleado(id_empleado))ENGINE=INNODB;
+
+
+
+insert into orden_servicio
+values(1,'07/06/2020','alberto','loma alta villa del carbon mexico',5523698741,'master recorder','grabacion de llamadas de la empresa',20000,'tarjeta de credito',1,1);
+
+
+
+create table formulario_queja(
+    n_formulario int(12) not null primary key,
+    nombre_cliente varchar(50) not null,
+    direccion varchar(100) not null,
+    telefono int(13) not null,
+    nomb_contacto varchar(50) not null,
+    cargo_contacto varchar(50) not null,
+    tipo_servicio varchar(50) not null,
+    detalles_reclamo varchar(150) not null,
+    solucion varchar(50) not null,
+    fecha varchar(12) not null,
+    n_factura int(12),
+    n_archivo int(12),
+    id_empleado_empleado int(12) not null,
+    id_cliente_cliente int(12) not null,
+    foreign key (id_empleado_empleado)
+    references empleado(id_empleado),
+    foreign key (id_cliente_cliente)
+    references cliente(id_cliente))ENGINE=INNODB;
+
+
+insert into formulario_queja
+values(1,'alberto','loma alta villa del carbon mexico',5523698741,'ernesto de la o viquez','director de desarrollo de software','master recorder','saturacion de servidor','correccion de codigo','07/06/2020',1,3,1,1);
+
+create table roles
+(id int not null primary key auto_increment,
+rol varchar(50) not null)ENGINE=INNODB;
+
+
+create table usuario
+(id int not null primary key auto_increment,
+usuario varchar(50) not null,
+password varchar(200) not null,
+id_roles int not null,
+foreign key(id_roles)
+references roles(id))ENGINE=INNODB;
+
+
+CREATE USER 'maria'@'localhost' IDENTIFIED BY 'mysql123';
+
+
+GRANT SELECT, INSERT ON datavoice.minuta TO 'ernesto'@'localhost';
+
+
+
+
+

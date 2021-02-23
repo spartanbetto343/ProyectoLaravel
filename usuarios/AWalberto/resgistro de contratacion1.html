@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Registro de contratacion</title>
+	<link rel="shortcut icon" type="image/x-ico" href="imagenes/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="CSS/estilos.css">
+	<script src="javascript/validacion.js"></script>
+	<style>
+		body
+		{
+	        background-image: url(imagenes/ejemplo5.webp);
+	        background-size: cover;
+		}
+		header 
+		{
+			position:relative;
+		}
+		div
+		{
+			position: relative;
+		}
+		.datos
+		{
+			background-color: #F43B1B;
+			color: black;
+			text-align: justify;
+			position: relative;
+			border-radius: 15px;
+			font-size: 20px; 
+		}
+		.div1
+		{
+			margin-left: 100px;
+			margin-right: 100px;
+			color: white;
+			position: relative;
+		}
+		.formulario
+		{
+			background-color: #F43B1B;
+			margin-left: 150px;
+			margin-right: 150px;
+			border-radius: 15px;
+			font-size: 20px; 
+			margin-bottom: 50px;
+			padding-bottom: 20px;
+			padding-top: 10px;
+		}
+		input
+		{
+			height: 30px;
+		}
+		select
+		{
+			height: 30px;
+			width: 387px;
+		}
+		.enviar
+		{
+			background-color: #FF0000;
+			border-radius: 15px;
+			color: white;
+			height: 40px;
+			width: 100px;
+			font-size: 20px;
+		}
+		.input
+		{
+			width: 387px;
+		}
+		#siguiente
+		{
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<div class="menu">
+		<p><img src="imagenes/logodata.png" height="75px" width="150px"></p>
+		<nav>
+			<ul>
+				<li><a href="Pagina inicio.html">Inicio</a></li>
+				<li><a href="Quienes Somos.html">Empresa</a></li>
+				<li><a href="Mision.html">Misión</a></li>
+				<li><a href="Vision.html">Visión</a></li>
+				<li><a href="Contactanos.html">Contactanos</a></li>
+				<li><a href="Servicios1.html">Servicios</a></li>
+				<li><a href="Mi Curriculum.html">Desarrollador</a></li>
+			</ul>
+		</nav>
+		</div>
+	</header>
+	<div class="div1">
+    	<p class="datos"><strong>Productivity</strong><br>
+    		Aumenta exponencialmente la productividad de las áreas de las empresas hasta un 300% al automatizar todo su proceso tecnológico. Esta solución permite mejorar la administración de la gestión de Call Center, optimizando las operaciones de servicio y soporte al cliente a través de diversos módulos simplificando procesos permitiendo diseñar y llevar a cabo cualquier estrategia operativa conforme a las necesidades de su empresa.
+    		<br>
+    		<strong>Funcionalidades:</strong><br>
+			-Robot de marcación automática (Predictivo, Preventivo, Manual).<br>
+			-CTI para personalizar por peticiones por servicio y nos reconectamos con cualquier CRM.<br>
+			-Historial de clientes y tipificación de llamadas.<br>
+			-MultiSkills de ejecutivos basado en prioridades.<br>
+			-Administración de campañas telefónicas In/ OutBound.<br>
+			-Monitoreo grafico en tiempo real de ejecutivos y llamadas.<br>
+			-Modulo para ver estadísticas (Productividad, Adherencia, Speking y niveles de servicio).<br>
+			-Módulo de intrusión local o remota.<br>
+			-Creación de campañas sin ayuda del área de sistemas.<br>
+			-Cargar base de datos para campañas nuevas incluso desde Excel.<br>
+			-Solución en Venta y Hosting.<br>
+    	</p>
+    </div>
+    <div class="formulario"> 
+    	<center>
+    		<h1>Datos de contratación</h1>
+    		<form action="insertar.php" method="post" name="form-register" onsubmit="return validar();">
+    			
+    			<h2>Llenar los siguientes datos</h2>
+    			<input id="nombre" type="text" name="Nombre" placeholder="Nombre" maxlength="25" size="50" required>
+				<input id="apellidos" type="text" name="Apellidos" placeholder="Apellidos" maxlength="25" size="50" required>
+				<br>
+				<br>
+				<select id="estado" name="Estado">
+					<option value="Selecciona tu estado">Selecciona tu estado</option>
+					<option value="Aguascalientes">Aguascalientes</option>
+					<option value="Baja California">Baja California</option>
+					<option value="Baja California Sur">Baja California Sur</option>
+					<option value="Campeche">Campeche</option>
+					<option value="Coahuila de Zaragoza">Coahuila de Zaragoza</option>
+					<option value="Colima">Colima</option>
+					<option value="Chiapas">Chiapas</option>
+					<option value="Chihuahua">Chihuahua</option>
+					<option value="Distrito Federal">Distrito Federal</option>
+					<option value="Durango">Durango</option>
+					<option value="Guanajuato">Guanajuato</option>
+					<option value="Guerrero">Guerrero</option>
+					<option value="Hidalgo">Hidalgo</option>
+					<option value="Jalisco">Jalisco</option>
+					<option value="México">México</option>
+					<option value="Michoacán de Ocampo">Michoacán de Ocampo</option>
+					<option value="Morelos">Morelos</option>
+					<option value="Nayarit">Nayarit</option>
+					<option value="Nuevo León">Nuevo León</option>
+					<option value="Oaxaca">Oaxaca</option>
+					<option value="Puebla">Puebla</option>
+					<option value="Querétaro">Querétaro</option>
+					<option value="Quintana Roo">Quintana Roo</option>
+					<option value="San Luis Potosí">San Luis Potosí</option>
+					<option value="Sinaloa">Sinaloa</option>
+					<option value="Sonora">Sonora</option>
+					<option value="Tabasco">Tabasco</option>
+					<option value="Tamaulipas">Tamaulipas</option>
+					<option value="Tlaxcala">Tlaxcala</option>
+					<option value="Veracruz de Ignacio de la Llave">Veracruz de Ignacio de la Llave</option>
+					<option value="Yucatán">Yucatán</option>
+					<option value="Zacatecas">Zacatecas</option>
+				</select>
+				<input id="direccion" type="text" name="Dirección" placeholder="Dirección" size="50" required>
+				<br>
+				<br>
+				<input id="codigo" type="text" name="Codigo postal" placeholder="Codigo postal" size="50" required>
+				<input id="" type="text" name="Colonia" placeholder="Colonia" size="50">
+				<br>
+				<br>
+				<h2>Informacion adicional</h2>
+				<input  type="text" name="Entre calle 1" placeholder="Entre calle 1" size="50">
+				<input type="text" name="Entre calle 2" placeholder="Entre calle 2" size="50">
+				<br>
+				<br>
+				<input id="calle2" type="text" name="Manzana" placeholder="Manzana" size="50">
+				<input id="informacion" type="text" name="Informacion adicional" placeholder="Informacion adicional" size="50">
+				<br>
+				<br>
+				<input id="telefono" type="text" name="Telefono" placeholder="Telefono" size="50" required>
+				<input id="email" type="email" name="email" placeholder="Correo electronico" size="50" required>
+				<br>
+				<br>
+				<h2>Informacion del servicio</h2>
+				<select id="tipo" class="servicio" name="Tipo de servicio">
+				<option value="Tipo de servicio">Tipo de servicio</option>
+				<option value="Productivity">Productivity</option>
+				<option value="Broad Casting">Broad Casting</option>
+				<option value="Master Recorder">Master Recorder</option>
+				<option value="VoIP">VoIP</option>
+				<option value="Bridge">Bridge</option>
+				<option value="Conference Call">Conference Call</option>
+				<option value="Help Center">Help Center</option>
+				</select>
+				<input id="precio" class="input" type="number" name="Precio" placeholder="20,000.00" disabled>
+				<br>
+				<br>
+				<select id="metodo" name="Metodo de pago">
+					<option value="Metodo de pago">Metodo de pago</option>
+					<option value="Efectivo">Efectivo</option>
+					<option value="Tarjeta de credito/debito">Tarjeta de credito/debito</option>
+					<option value="Transferencia bancaria">Transferencia bancaria</option>
+				</select>
+				<input id="numero-cuenta" class="input" type="password" name="Numero de cuenta" placeholder="Inserte numero de cuenta">
+				<br>
+				<br>
+				<br>
+				<input id="enviar" class="enviar" type="submit" name="enviar" value="Enviar" placeholder="Enviar">
+				
+    		</form>
+
+    	</center>
+
+    </div>
+
+</body>
+</html>
+

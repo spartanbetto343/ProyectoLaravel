@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formulario de Queja</title>
+	<link rel="shortcut icon" type="image/x-ico" href="../../imagenes/favicon.ico">
+	<script type="text/javascript" src="../../javascript/queja.js"></script>
+	<style>
+		body
+		{
+			font-family: Helvetica;
+			font-size: 20px;
+			background-color: #DEDA04;
+			margin: 20px 20px 20px 20px;
+			position: relative;
+		}
+		h1
+		{
+			position: relative;
+		}
+		label
+		{
+			position: relative;
+		}
+		.registrar
+		{
+			background-color: #FF0000;
+			border-radius: 15px;
+			color: white;
+			height: 40px;
+			width: 100px;
+			font-size: 20px;
+			position: relative;
+		}
+		input
+		{
+			height: 25px;
+			margin-left: 10px;
+		}
+		form
+		{
+			margin-left: 100px;
+		}
+
+	</style>
+</head>
+<body>
+	<p><img src="../imagenes/logodata.png" height="75px" width="150px"></p>
+
+	<center><h1>Formulario de queja</h1></center>
+	<form action="queja.php" method="get" name="queja" onsubmit="return validar5();">
+
+		<label for="numero">Numero de formulario</label><br>
+		<input id="numero" type="text" name="numero"  size="70" required>
+		<br>
+		<br>
+		<label for="nombre">Nombre del cliente</label><br>
+		<input id="nombre" type="text" name="nombre"  size="70" required>
+		<br>
+		<br>
+		<label for="direccion">Direccion</label><br>
+		<input id="direccion" type="text" name="direccion" size="70" required>
+		<br>
+		<br>
+		<label for="telefono">Telefono</label><br>
+		<input id="telefono" type="text" name="telefono"  size="70" required>
+		<br>
+		<br>
+		<label for="contacto">Nombre de contacto</label><br>
+		<input id="contacto" type="text" name="contacto"  size="70" required>
+		<br>
+		<br>
+		<label for="cargo">Cargo del contacto</label><br>
+		<input id="cargo" type="text" name="cargo"  size="70" required>
+		<br>
+		<br>
+		<label for="tipo">Tipo de servicio</label><br>
+		<input id="tipo" type="text" name="tipo"  size="70" required>
+		<br>
+		<br>
+		<label for="detalles">Detalles del Reclamo</label><br>
+		<input id="detalles" type="text" name="detalles"  size="70" required>
+		<br>
+		<br>
+		<label for="solucion">Solucion</label><br>
+		<input id="solucion" type="text" name="solucion"  size="70" required>
+		<br>
+		<br>
+		<label for="fecha">Fecha</label><br>
+		<input id="fecha" type="text" name="fecha"  size="70" required>
+		<br>
+		<br>
+		<label for="factura">Numero de Factura</label><br>
+		<input id="factura" type="text" name="factura"  size="70" required>
+		<br>
+		<br>
+		<label for="archivo">Archivo</label><br>
+		<input id="archivo" type="text" name="archivo"  size="70" required>
+		<br>
+		<br>
+		<label for="empleado">Id de empleado</label><br>
+		<input id="empleado" type="text" name="empleado"  size="70" required>
+		<br>
+		<br>
+		<label for="cliente">Id de cliente</label><br>
+		<input id="cliente" type="" name="cliente"  size="70" required>
+		<br>
+		<br>
+		<br>
+
+		
+		<center><input class="registrar" type="submit" name="registrar" value="Registrar" placeholder="Registrar"></center>
+
+	</form>
+
+</body>
+</html>

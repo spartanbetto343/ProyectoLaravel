@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registro de Factura</title>
+	<link rel="shortcut icon" type="image/x-ico" href="../imagenes/favicon.ico">
+	<script type="text/javascript" src="../../javascript/factura.js"></script>
+	<style>
+		body
+		{
+			font-family: Helvetica;
+			font-size: 20px;
+			background-color: #F43B1B;
+			margin: 20px 20px 20px 20px;
+			position: relative;
+		}
+		h1
+		{
+			position: relative;
+		}
+		label
+		{
+			position: relative;
+		}
+		.registrar
+		{
+			background-color: #FF0000;
+			border-radius: 15px;
+			color: white;
+			height: 40px;
+			width: 100px;
+			font-size: 20px;
+			position: relative;
+		}
+		input
+		{
+			height: 25px;
+			margin-left: 10px;
+		}
+		form
+		{
+			margin-left: 100px;
+		}
+
+	</style>
+</head>
+<body>
+	<p><img src="../imagenes/logodata.png" height="75px" width="150px"></p>
+	<center><h1>Registro de Factura</h1></center>
+	
+	<form action="factura.php" method="get" name="factura" onsubmit="return validar13()">
+
+		<label for="numero">Numero de factura</label><br>
+		<input id="numero" type="text" name="numero"  size="70" required>
+		<br>
+		<br>
+		<label for="fecha">Fecha de emision</label><br>
+		<input id="fecha" type="text" name="fecha"  size="70"required>
+		<br>
+		<br>
+		<label for="fecha2">Fecha de vencimiento</label><br>
+		<input id="fecha2" type="text" name="fecha2"  size="70"required>
+		<br>
+		<br>
+		<label for="rfc">RFC</label><br>
+		<input id="rfc" type="text" name="rfc"  size="70"required>
+		<br>
+		<br>
+		<label for="concepto">Concepto</label><br>
+		<input id="concepto" type="text" name="concepto"  size="70"required>
+		<br>
+		<br>
+		<label for="importe">Importe</label><br>
+		<input id="importe" type="text" name="importe"  size="70"required>
+		<br>
+		<br>
+		<label for="cliente">Nombre del cliente</label><br>
+		<input id="cliente" type="text" name="cliente"  size="70"required>
+		<br>
+		<br>
+		<label for="direccion">Direccion</label><br>
+		<input id="direccion" type="text" name="direccion"  size="70"required>
+		<br>
+		<br>
+		<label for="empresa">Nombre de la empresa</label><br>
+		<input id="empresa" type="text" name="empresa"  size="70"required>
+		<br>
+		<br>
+		<label for="clave">Clave empresa</label><br>
+		<input id="clave" type="text" name="clave"  size="70"required>
+		<br>
+		<br>
+		<label for="archivo">Numero de archivo</label><br>
+		<input id="archivo" type="text" name="archivo"  size="70">
+		<br>
+		<br>
+		<label for="empleado">Id de empleado</label><br>
+		<input id="empleado" type="text" name="empleado"  size="70"required>
+		<br>
+		<br>
+		<label for="id_cliente">Id de cliente</label><br>
+		<input id="id_cliente" type="text" name="id_cliente"  size="70"required>
+		<br>
+		<br>
+		<br>
+
+		<center><input class="registrar" type="submit" name="registrar" value="Registrar" placeholder="Registrar"></center>
+
+
+
+	</form>
+
+</body>
+</html>

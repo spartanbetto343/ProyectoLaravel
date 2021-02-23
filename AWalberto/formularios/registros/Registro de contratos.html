@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registro de Contrato</title>
+	<link rel="shortcut icon" type="image/x-ico" href="../imagenes/favicon.ico">
+	<script type="text/javascript" src="../../javascript/contrato.js"></script>
+	<style>
+		body
+		{
+			font-family: Helvetica;
+			font-size: 20px;
+			background-color: #DEDA04;
+			margin: 20px 20px 20px 20px;
+			position: relative;
+		}
+		h1
+		{
+			position: relative;
+		}
+		label
+		{
+			position: relative;
+		}
+		.registrar
+		{
+			background-color: #FF0000;
+			border-radius: 15px;
+			color: white;
+			height: 40px;
+			width: 100px;
+			font-size: 20px;
+			position: relative;
+		}
+		input
+		{
+			height: 25px;
+			margin-left: 10px;
+		}
+		form
+		{
+			margin-left: 100px;
+		}
+
+	</style>
+</head>
+<body>
+	<p><img src="../imagenes/logodata.png" height="75px" width="150px"></p>
+	<center><h1>Registro de Contrato</h1></center>
+	
+	<form action="contrato.php" method="get" name="contrato" onsubmit="return validar16()">
+
+		<label for="numero">Numero de contrato</label><br>
+		<input id="numero" type="text" name="numero"  size="70"required>
+		<br>
+		<br>
+		<label for="tipo">Tipo</label><br>
+		<input id="tipo" type="text" name="tipo"  size="70"required>
+		<br>
+		<br>
+		<label for="nombre">Nombre</label><br>
+		<input id="nombre" type="text" name="nombre"  size="70"required>
+		<br>
+		<br>
+		<label for="apellido">Apellido</label><br>
+		<input id="apellido" type="text" name="apellido"  size="70"required>
+		<br>
+		<br>
+		<label for="empresa">Empresa</label><br>
+		<input id="empresa" type="text" name="empresa"  size="70"required>
+		<br>
+		<br>
+		<label for="direccion">Direccion empresa</label><br>
+		<input id="direccion" type="text" name="direccion"  size="70"required>
+		<br>
+		<br>
+		<label for="fecha">Fecha</label><br>
+		<input id="fecha" type="text" name="fecha"  size="70"required>
+		<br>
+		<br>
+		<label for="duracion">Duracion contrato</label><br>
+		<input id="duracion" type="text" name="duracion"  size="70"required>
+		<br>
+		<br>
+		<label for="archivo">Numero de archivo</label><br>
+		<input id="archivo" type="text" name="archivo"  size="70"required>
+		<br>
+		<br>
+		<label for="servicio">Tipo de Servicio</label><br>
+		<input id="servicio" type="text" name="servicio"  size="70"required>
+		<br>
+		<br>
+		<label for="monto">Monto a pagar</label><br>
+		<input id="monto" type="text" name="monto"  size="70"required>
+		<br>
+		<br>
+		<label for="minimo">Sueldo minimo</label><br>
+		<input id="minimo" type="text" name="minimo"  size="70"required>
+		<br>
+		<br>
+		<label for="maximo">Sueldo maximo</label><br>
+		<input id="maximo" type="text" name="maximo"  size="70"required>
+		<br>
+		<br>
+		<label for="puesto">Puesto</label><br>
+		<input id="puesto" type="text" name="puesto"  size="70"required>
+		<br>
+		<br>
+		<label for="prueba">Duracion de prueba</label><br>
+		<input id="prueba" type="text" name="prueba"  size="70"required>
+		<br>
+		<br>
+		<label for="vacaciones">Vacaciones</label><br>
+		<input id="vacaciones" type="text" name="vacaciones"  size="70"required>
+		<br>
+		<br>
+		<label for="id_cliente">Id empleado</label><br>
+		<input id="id_cliente" type="text" name="id_cliente"  size="70"required>
+		<br>
+		<br>
+		
+
+
+		<center><input class="registrar" type="submit" name="registrar" value="Registrar" placeholder="Registrar"></center>
+
+
+
+	</form>
+
+</body>
+</html>

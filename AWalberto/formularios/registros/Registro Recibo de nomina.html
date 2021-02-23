@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Recibo de Nomina</title>
+	<link rel="shortcut icon" type="image/x-ico" href="../imagenes/favicon.ico">
+	<script type="text/javascript" src="../../javascript/recibo de nomina.js"></script>
+	<style>
+		body
+		{
+			font-family: Helvetica;
+			font-size: 20px;
+			background-color: #DEDA04;
+			margin: 20px 20px 20px 20px;
+			position: relative;
+		}
+		h1
+		{
+			position: relative;
+		}
+		label
+		{
+			position: relative;
+		}
+		.registrar
+		{
+			background-color: #FF0000;
+			border-radius: 15px;
+			color: white;
+			height: 40px;
+			width: 100px;
+			font-size: 20px;
+			position: relative;
+		}
+		input
+		{
+			height: 25px;
+			margin-left: 10px;
+		}
+		form
+		{
+			margin-left: 100px;
+		}
+
+	</style>
+</head>
+<body>
+	<p><img src="../imagenes/logodata.png" height="75px" width="150px"></p>
+	<center><h1>Registro Recibo de Nomina</h1></center>
+	
+	<form action="nomina.php" method="get" name="nomina" onsubmit="return validar6()">
+
+		<label for="folio">Folio</label><br>
+		<input id="folio" type="text" name="folio"  size="70"required>
+		<br>
+		<br>
+		<label for="empresa">Nombre de la empresa</label><br>
+		<input id="empresa" type="text" name="empresa"  size="70"required>
+		<br>
+		<br>
+		<label for="direccion">Direccion</label><br>
+		<input id="direccion" type="text" name="direccion"  size="70"required>
+		<br>
+		<br>
+		<label for="rfc">RFC</label><br>
+		<input id="rfc" type="text" name="rfc"  size="70"required>
+		<br>
+		<br>
+		<label for="periodo">Periodo de pago</label><br>
+		<input id="periodo" type="text" name="periodo"  size="70"required>
+		<br>
+		<br>
+		<label for="fecha">Fecha de pago</label><br>
+		<input id="fecha" type="text" name="fecha"  size="70"required>
+		<br>
+		<br>
+		<label for="nombre">Nombre del empleado</label><br>
+		<input id="nombre" type="text" name="nombre"  size="70"required>
+		<br>
+		<br>
+		<label for="curp">CURP</label><br>
+		<input id="curp" type="text" name="curp"  size="70"required>
+		<br>
+		<br>
+		<label for="pago">Tipo de pago</label><br>
+		<input id="pago" type="text" name="pago"  size="70"required>
+		<br>
+		<br>
+		<label for="normal">Salario normal</label><br>
+		<input id="normal" type="text" name="normal"  size="70"required>
+		<br>
+		<br>
+		<label for="hora">Salario por hora</label><br>
+		<input id="hora" type="text" name="hora"  size="70"required>
+		<br>
+		<br>
+		<label for="trabajadas">Horas trabajadas</label><br>
+		<input id="trabajadas" type="text" name="trabajadas"  size="70"required>
+		<br>
+		<br>
+		<label for="isr">Descuento ISR</label><br>
+		<input id="isr" type="text" name="isr"  size="70"required>
+		<br>
+		<br>
+		<label for="imss">Descuento IMSS</label><br>
+		<input id="imss" type="text" name="imss"  size="70"required>
+		<br>
+		<br>
+		<label for="deducciones">Total de deducciones</label><br>
+		<input id="deducciones" type="text" name="deducciones"  size="70"required>
+		<br>
+		<br>
+		<label for="neto">Neto recibido</label><br>
+		<input id="neto" type="text" name="neto"  size="70"required>
+		<br>
+		<br>
+		<label for="fiscal">Folio fiscal</label><br>
+		<input id="fiscal" type="text" name="fiscal"  size="70">
+		<br>
+		<br>
+		<label for="cuenta">Numero de cuenta</label><br>
+		<input id="cuenta" type="text" name="cuenta"  size="70">
+		<br>
+		<br>
+		<label for="empleado">Id de empleado</label><br>
+		<input id="empleado" type="text" name="empleado"  size="70"required>
+		<br>
+		<br>
+		<br>
+
+
+		<center><input class="registrar" type="submit" name="registrar" value="Registrar" placeholder="Registrar"></center>
+
+
+
+	</form>
+
+</body>
+</html>

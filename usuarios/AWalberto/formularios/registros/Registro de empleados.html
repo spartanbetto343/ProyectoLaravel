@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formulario de registro de empleado</title>
+	<link rel="shortcut icon" type="image/x-ico" href="../imagenes/favicon.ico">
+	<script type="text/javascript" src="../../javascript/validacion empleados.js"></script>
+	<style>
+		body
+		{
+			font-family: Elvetica;
+			font-size: 20px;
+			background-color: #F43B1B;
+			margin: 20px 20px 20px 20px;
+			position: relative;
+		}
+		h1
+		{
+			position: relative;
+		}
+		label
+		{
+			position: relative;
+		}
+		.enviar
+		{
+			background-color: #FF0000;
+			border-radius: 15px;
+			color: white;
+			height: 40px;
+			width: 100px;
+			font-size: 20px;
+			position: relative;
+		}
+		input
+		{
+			height: 25px;
+			margin-left: 10px;
+		}
+		form
+		{
+			margin-left: 100px;
+		}
+	</style>
+</head>
+<body>
+	<p><img src="../imagenes/logodata.png" height="75px" width="150px"></p>
+
+	<form action="empleado.php" method="get" name="form-register" onsubmit="return validar1();">
+		<center><h1>Formulario de registro de empleado</h1></center>
+
+		<label for="id_empleado">Id empleado</label><br>
+		<input id="id_empleado" type="text" name="id" size="70"  required>
+		<br>
+		<br>
+		<label for="nombre">Nombre</label><br>
+		<input id="nombre" type="text" name="nombre"  size="70"  required>
+		<br>
+		<br>
+		<label for="apellidos">Apellidos</label><br>
+		<input id="apellidos" type="text" name="apellidos" size="70" required>
+		<br>
+		<br>
+		<label for="direccion">Direccion</label><br>
+		<input id="direccion" type="text" name="direccion" size="70" required>
+		<br>
+		<br>
+		<label for="email">E-mail</label><br>
+        <input id="email" type="text" name="email" size="70" required>  
+        <br>
+        <br>
+        <label for="sueldo">Sueldo</label><br>
+        <input id="sueldo" type="text" name="sueldo" size="70" required> 
+        <br>
+        <br>
+        <label for="puesto">Puesto</label><br>
+        <input id="puesto" type="text" name="puesto" size="70" required>
+        <br>
+        <br>
+        <label for="sucursal">Sucursal</label><br>
+        <input id="sucursal" type="text" name="sucursal" size="70" required>
+        <br>
+        <br>
+        <label for="curp">CURP</label><br>
+        <input id="curp" type="text" name="curp" size="70" required>
+        <br>
+        <br>
+        <label for="rfc">RFC</label><br>
+        <input id="rfc" type="text" name="rfc" size="70" required>
+        <br>
+        <br>
+        <label for="telefono">Telefono</label><br>
+        <input id="telefono" type="text" name="telefono" size="70" required>
+        <br>
+        <br>
+        <label for="titulo">Certificado/titulo profesional</label><br>
+        <input id="titulo" type="text" name="titulo" size="70" required>
+        <br>
+        <br>
+		<label for="cedula">Cedula profesional</label><br>
+		<input id="cedula" type="text" name="cedula" size="70">
+		<br>
+		<br>
+		<label for="mobiliario">Codigo mobiliario que utiliza</label><br>
+		<input id="mobiliario" type="text" name="mobiliario" size="70" required>
+		<br>
+		<br>
+		<label for="empresa">Clave_empresa</label><br>
+		<input id="empresa" type="text" name="empresa" size="70" required>
+		<br>
+		<br>
+		<br>
+        <center><input id="button" class="enviar" type="submit" name="enviar" value="Enviar" placeholder="Enviar"></center>
+
+	</form>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Registro Certificado/Titulo</title>
+	<link rel="shortcut icon" type="image/x-ico" href="../imagenes/favicon.ico">
+	<script type="text/javascript" src="../../javascript/certificado.js"></script>
+	<style>
+		body
+		{
+			font-family: Helvetica;
+			font-size: 20px;
+			background-color: #72CC00;
+			margin: 20px 20px 20px 20px;
+			position: relative;
+		}
+		h1
+		{
+			position: relative;
+		}
+		label
+		{
+			position: relative;
+		}
+		.registrar
+		{
+			background-color: #FF0000;
+			border-radius: 15px;
+			color: white;
+			height: 40px;
+			width: 100px;
+			font-size: 20px;
+			position: relative;
+		}
+		input
+		{
+			height: 25px;
+			margin-left: 10px;
+		}
+		form
+		{
+			margin-left: 100px;
+		}
+
+	</style>
+</head>
+<body>
+	<p><img src="../imagenes/logodata.png" height="75px" width="150px"></p>
+
+	<center><h1>Registro de Certificado/Titulo</h1></center>
+	<form action="certificado.php" method="get" name="resgistro" onsubmit="return validar4()">
+
+		<label for="certificado">Id del certificado</label><br>
+		<input id="certificado" type="text" name="certificado"  size="70" required>
+		<br>
+		<br>
+		<label for="tipo">Tipo de servicio</label><br>
+		<input id="tipo" type="text" name="tipo"  size="70" required>
+		<br>
+		<br>
+		<label for="nombre">Nombre</label><br>
+		<input id="nombre" type="text" name="nombre"  size="70" required>
+		<br>
+		<br>
+		<label for="institucion">Institucion</label><br>
+		<input id="institucion" type="text" name="institucion"  size="70" required>
+		<br>
+		<br>
+		<label for="expedicion">Año de expedicion</label><br>
+		<input id="expedicion" type="text" name="expedicion"  size="70" required>
+		<br>
+		<br>
+		<label for="archivo">Numero de archivo</label><br>
+		<input id="archivo" type="text" name="archivo"  size="70">
+		<br>
+		<br>
+		<label for="empleado">Id de empleado</label><br>
+		<input id="empleado" type="text" name="empleado"  size="70" required>
+		<br>
+		<br>
+		<br>
+
+
+		<center><input class="registrar" type="submit" name="registrar" value="Registrar" placeholder="Registrar"></center>
+
+
+
+	</form>
+
+</body>
+</html>

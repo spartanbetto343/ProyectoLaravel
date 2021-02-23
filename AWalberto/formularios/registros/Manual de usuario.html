@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Manual de usuario</title>
+	<link rel="shortcut icon" type="image/x-ico" href="../../imagenes/favicon.ico">
+	<script type="text/javascript" src="../../javascript/manual de usuario.js"></script>
+	<style>
+		body
+		{
+			font-family: Elvetica;
+			font-size: 20px;
+			background-color: #DEDA04;
+			margin: 20px 20px 20px 20px;
+			position: relative;
+		}
+		h1
+		{
+			position: relative;
+		}
+		label
+		{
+			position: relative;
+		}
+		.enviar
+		{
+			background-color: #FF0000;
+			border-radius: 15px;
+			color: white;
+			height: 40px;
+			width: 100px;
+			font-size: 20px;
+			position: relative;
+		}
+		input
+		{
+			height: 25px;
+			margin-left: 10px;
+		}
+		form
+		{
+			margin-left: 100px;
+		}
+	</style>
+</head>
+<body>
+	<p><img src="../imagenes/logodata.png" height="75px" width="150px"></p>
+
+	<form action="insertar.php" method="get" name="form-register" onsubmit="return validar9();">
+
+		<center><h1>Registro Manual de Usuario</h1></center>
+
+		<label for="numero">Numero de Manual</label><br>
+		<input id="numero" type="text" name="numero" size="70"  required>
+		<br>
+		<br>
+		<label for="autor">Autor</label><br>
+		<input id="autor" type="text" name="autor" size="70"  required>
+		<br>
+		<br>
+		<label for="servicio">Servicio</label><br>
+		<input id="servicio" type="text" name="servicio" size="70"  required>
+		<br>
+		<br>
+		<label for="cliente">Cliente</label><br>
+		<input id="cliente" type="text" name="cliente" size="70"  required>
+		<br>
+		<br>
+		<label for="titulo">Titulo</label><br>
+		<input id="titulo" type="text" name="titulo" size="70"  required>
+		<br>
+		<br>
+		<label for="archivo">Numero de archivo</label><br>
+		<input id="archivo" type="text" name="archivo" size="70"  required>
+		<br>
+		<br>
+		<label for="empleado">Id de empleado</label><br>
+		<input id="empleado" type="text" name="empleado" size="70"  required>
+		<br>
+		<br>
+		<br>
+
+
+        <center><input id="button" class="enviar" type="submit" name="enviar" value="Enviar" placeholder="Enviar"></center>
+
+	</form>
+</body>
+</html>

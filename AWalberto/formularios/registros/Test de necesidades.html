@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test de Necesidades</title>
+	<link rel="shortcut icon" type="image/x-ico" href="../imagenes/favicon.ico">
+	<script type="text/javascript" src="../../javascript/test de necesidades.js"></script>
+	<style>
+		body
+		{
+			font-family: Helvetica;
+			font-size: 20px;
+			background-color: #DEDA04;
+			margin: 20px 20px 20px 20px;
+			position: relative;
+		}
+		h1
+		{
+			position: relative;
+		}
+		label
+		{
+			position: relative;
+		}
+		.registrar
+		{
+			background-color: #FF0000;
+			border-radius: 15px;
+			color: white;
+			height: 40px;
+			width: 100px;
+			font-size: 20px;
+			position: relative;
+		}
+		input
+		{
+			height: 25px;
+			margin-left: 10px;
+		}
+		form
+		{
+			margin-left: 100px;
+		}
+
+	</style>
+</head>
+<body>
+	<p><img src="../imagenes/logodata.png" height="75px" width="150px"></p>
+	<center><h1>Test de Necesidades</h1></center>
+	
+	<form action="test.php" method="get" name="resgistro" onsubmit="return validar8()">
+
+		<label for="numero">Numero de test</label><br>
+		<input id="numero" type="text" name="numero"  size="70"required>
+		<br>
+		<br>
+		<label for="nombre">Nombre del cliente</label><br>
+		<input id="nombre" type="text" name="nombre"  size="70"required>
+		<br>
+		<br>
+		<label for="fecha">Fecha de elaboracion</label><br>
+		<input id="fecha" type="text" name="fecha"  size="70"required>
+		<br>
+		<br>
+		<label for="necesidades">Nesesidades</label><br>
+		<input id="necesidades" type="text" name="necesidades"  size="70"required>
+		<br>
+		<br>
+		
+		<label for="tipo">Tipo de servicio</label><br>
+		<input id="tipo" type="text" name="tipo"  size="70"required>
+		<br>
+		<br>
+		
+		<label for="requerimientos">Requerimientos</label><br>
+		<input id="requerimientos" type="text" name="requerimientos"  size="70"required>
+		<br>
+		<br>
+		<label for="solucion">Solucion</label><br>
+		<input id="solucion" type="text" name="solucion"  size="70"required>
+		<br>
+		<br>
+		<label for="empleado">Id de empleado</label><br>
+		<input id="empleado" type="text" name="empleado"  size="70"required>
+		<br>
+		<br>
+		
+		
+		
+
+		<center><input class="registrar" type="submit" name="registrar" value="Registrar" placeholder="Registrar"></center>
+
+
+
+	</form>
+
+</body>
+</html>

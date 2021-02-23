@@ -1,0 +1,61 @@
+body
+{
+	font-family: Helvetica;
+}
+p
+{
+	font-size: 25px;
+    padding: 15px 15px 15px 15px;
+    position: relative;
+}
+.Helicom
+{
+	color: white;
+	background: #282A29;
+	justify-content: space-between;
+	display: flex;
+
+}
+li
+{
+	list-style: none;
+	margin: 15px;
+	display: block;
+	position: relative;
+}
+.menu
+{
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+}
+ul
+{
+	display: flex;
+	background: #282A29;
+	color: white;
+	font-size: 25px;
+	position: relative;
+}
+a
+{
+	color: white;
+	text-decoration: none;
+	position: relative;
+}
+.menu ul a:hover
+{
+	background: #00FFC5;
+	border: #00FFC5;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	color: black;
+}
+header
+{
+	margin-left: 50px;
+	margin-right: 50px;
+	margin-top: 35px;
+	margin-bottom: 0px;
+	position: relative;
+}

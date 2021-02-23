@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registro de Minuta</title>
+	<link rel="shortcut icon" type="image/x-ico" href="../imagenes/favicon.ico">
+	<script type="text/javascript" src="../../javascript/minuta.js"></script>
+	<style>
+		body
+		{
+			font-family: Helvetica;
+			font-size: 20px;
+			background-color: #DEDA04;
+			margin: 20px 20px 20px 20px;
+			position: relative;
+		}
+		h1
+		{
+			position: relative;
+		}
+		label
+		{
+			position: relative;
+		}
+		.registrar
+		{
+			background-color: #FF0000;
+			border-radius: 15px;
+			color: white;
+			height: 40px;
+			width: 100px;
+			font-size: 20px;
+			position: relative;
+		}
+		input
+		{
+			height: 25px;
+			margin-left: 10px;
+		}
+		form
+		{
+			margin-left: 100px;
+		}
+
+	</style>
+</head>
+<body>
+	<p><img src="../imagenes/logodata.png" height="75px" width="150px"></p>
+	<center><h1>Registro de Minuta</h1></center>
+	
+	<form action="minuta.php" method="get" name="minuta" onsubmit="return validar7()">
+
+		<label for="numero">Numero de Minuta</label><br>
+		<input id="numero" type="text" name="numero"  size="70"required>
+		<br>
+		<br>
+		<label for="proyecto">Numero del proyecto</label><br>
+		<input id="proyecto" type="text" name="proyecto"  size="70"required>
+		<br>
+		<br>
+		<label for="alcances">Alcances</label><br>
+		<input id="alcances" type="text" name="alcances"  size="70"required>
+		<br>
+		<br>
+		<label for="implicaciones">Implicaciones</label><br>
+		<input id="implicaciones" type="text" name="implicaciones"  size="70"required>
+		<br>
+		<br>
+		<br><label for="desiciones">Desiciones</label><br>
+		<input id="desiciones" type="text" name="desiciones"  size="70"required>
+		<br>
+		<br>
+		<label for="empleado">Id de empleado</label><br>
+		<input id="empleado" type="text" name="empleado"  size="70"required>
+		<br>
+		<br>
+
+		
+		<center><input class="registrar" type="submit" name="registrar" value="Registrar" placeholder="Registrar"></center>
+
+
+
+	</form>
+
+</body>
+</html>

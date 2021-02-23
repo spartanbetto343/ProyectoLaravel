@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registro de informes/reportes</title>
+	<link rel="shortcut icon" type="image/x-ico" href="../imagenes/favicon.ico">
+	<script type="text/javascript" src="../../javascript/informe o reporte.js"></script>
+	<style>
+		body
+		{
+			font-family: Elvetica;
+			font-size: 20px;
+			background-color: #DEDA04;
+			margin: 20px 20px 20px 20px;
+			position: relative;
+		}
+		h1
+		{
+			position: relative;
+		}
+		label
+		{
+			position: relative;
+		}
+		.enviar
+		{
+			background-color: #FF0000;
+			border-radius: 15px;
+			color: white;
+			height: 40px;
+			width: 100px;
+			font-size: 20px;
+			position: relative;
+		}
+		input
+		{
+			height: 25px;
+			margin-left: 10px;
+		}
+		form
+		{
+			margin-left: 100px;
+		}
+	</style>
+</head>
+<body>
+	<p><img src="../imagenes/logodata.png" height="75px" width="150px"></p>
+
+	<form action="reporte.php" method="get" name="form-register" onsubmit="return validar12();">
+
+		<center><h1>Registro de Informes/Reportes</h1></center>
+
+		<label for="numero">Numero de informe/reporte</label><br>
+		<input id="numero" type="text" name="numero" size="70"  required>
+		<br>
+		<br>
+		<label for="titulo">Titulo</label><br>
+		<input id="titulo" type="text" name="titulo" size="70"  required>
+		<br>
+		<br>
+		<label for="autor">Autor</label><br>
+		<input id="autor" type="text" name="autor" size="70"  required>
+		<br>
+		<br>
+		<label for="lugar">Lugar</label><br>
+		<input id="lugar" type="text" name="lugar" size="70"  required>
+		<br>
+		<br>
+		<label for="fecha">Fecha</label><br>
+		<input id="fecha" type="text" name="fecha" size="70"  required>
+		<br>
+		<br>
+		<label for="contenido">Contenido</label><br>
+		<input id="contenido" type="text" name="contenido" size="70" >
+		<br>
+		<br>
+		<label for="archivo">Numero de archivo</label><br>
+		<input id="archivo" type="text" name="archivo" size="70"  >
+		<br>
+		<br>
+		<label for="nombre">Nombre</label><br>
+		<input id="nombre" type="text" name="nombre" size="70" >
+		<br>
+		<br>
+		<label for="asunto">Asunto</label><br>
+		<input id="asunto" type="text" name="asunto" size="70">
+		<br>
+		<br>
+		<label for="hora">Hora de entrada</label><br>
+		<input id="hora" type="text" name="hora" size="70">
+		<br>
+		<br>
+		<label for="salida">Salida</label><br>
+		<input id="salida" type="text" name="salida" size="70">
+		<br>
+		<br>
+		<label for="empleado">Id de Empleado</label><br>
+		<input id="empleado" type="text" name="empleado" size="70"  required>
+		<br>
+		<br>
+		<br>
+
+		
+        <center><input id="button" class="enviar" type="submit" name="enviar" value="Enviar" placeholder="Enviar"></center>
+
+	</form>
+</body>
+</html>

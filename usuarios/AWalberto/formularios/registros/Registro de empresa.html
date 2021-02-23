@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registro de la empresa</title>
+	<link rel="shortcut icon" type="image/x-ico" href="../imagenes/favicon.ico">
+	<script type="text/javascript" src="../../javascript/validacion empresa.js"></script>
+	<style>
+		body
+		{
+			font-family: Elvetica;
+			font-size: 20px;
+			background-color: #72CC00;
+			margin: 20px 20px 20px 20px;
+			position: relative;
+		}
+		h1
+		{
+			position: relative;
+		}
+		label
+		{
+			position: relative;
+		}
+		.enviar
+		{
+			background-color: #FF0000;
+			border-radius: 15px;
+			color: white;
+			height: 40px;
+			width: 100px;
+			font-size: 20px;
+			position: relative;
+		}
+		input
+		{
+			height: 25px;
+			margin-left: 10px;
+		}
+		form
+		{
+			margin-left: 100px;
+		}
+	</style>
+</head>
+<body>
+	<p><img src="../imagenes/logodata.png" height="75px" width="150px"></p>
+
+	<form action="empresa.php" method="get" name="form-register" onsubmit="return validar2();">
+		
+		<center><h1>Formulario de registro de empresa</h1></center>
+		<label for="clave">Clave</label><br>
+		<input id="clave" type="text" name="clave" size="70" required>
+		<br>
+		<br>
+		<label for="nombre">Nombre</label><br>
+		<input id="nombre" type="text" name="nombre"  size="70" required>
+		<br>
+		<br>
+		<label for="direccion">Direccion</label><br>
+		<input id="direccion" type="text" name="direccion" size="70" required>
+		<br>
+		<br>
+		<label for="clave_ent">Clave de la Entidad Federativa</label><br>
+		<input id="clave_ent" type="text" name="clave_ent" size="70" required>
+		<br>
+		<br>
+		<label for="telefono">Telefono</label><br>
+        <input id="telefono" type="text" name="telefono" size="70" required>  
+        <br>
+        <br>
+        <br>
+        <center><input id="button" class="enviar" type="submit" name="enviar" value="Enviar" placeholder="Enviar"></center>
+	</form>
+
+</body>
+</html>
